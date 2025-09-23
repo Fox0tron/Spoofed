@@ -86,3 +86,11 @@ footer {
   width: 100%;
   z-index: 1;
 }
+
+/* Mobile fix: only affects phones */
+@media (max-width: 600px) {
+  .top-image {
+    width: 70vw;  /* scale down the logo */
+    top: 8%;      /* move it lower so it’s above the text */
+  }
+}
