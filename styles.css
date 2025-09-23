@@ -1,0 +1,88 @@
+:root {
+  --logo-size: 125%;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1a1a1a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.top-image {
+  width: var(--logo-size);
+  height: auto;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.statement {
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  text-shadow: 0 0 8px rgba(255,255,255,0.6);
+  padding: 0 20px;
+  overflow: visible;
+  animation: float 3s ease-in-out infinite;
+}
+
+.statement p {
+  color: #aaa;
+  text-shadow: 0 0 4px rgba(255,255,255,0.3);
+}
+
+.glitch {
+  color: #ff0000;
+  font-weight: bold;
+  text-shadow: 0 0 8px #570000, 0 0 16px #570000;
+  display: inline-block;
+  position: relative;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px,-1px); }
+  60% { transform: translate(-1px,-1px); }
+  80% { transform: translate(1px,1px); }
+  100% { transform: translate(0,0); }
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  color: #a64dff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 100%;
+  z-index: 1;
+}
